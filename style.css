@@ -1,0 +1,39 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #ffdee9, #b5fffc);
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  text-align: center;
+  padding-top: 20%;
+}
+
+h1 {
+  font-size: 3em;
+  color: #ff4d6d;
+}
+
+p {
+  font-size: 1.5em;
+  color: #333;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1.1em;
+  background: #ffc107;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
