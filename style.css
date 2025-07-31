@@ -10,6 +10,13 @@ body {
   background-position: center;   /* Center the image */
 }
 
+html, body {
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+
 .container {
   margin: 0 auto; /* center container */
   padding: 0 15px;
