@@ -11,8 +11,10 @@ body {
 }
 
 .container {
+  margin: 0 auto; /* center container */
+  padding: 0 15px;
+  box-sizing: border-box;
   text-align: center;
-  
 }
 
 h1 {
@@ -25,31 +27,20 @@ h2 {
   color: #4d94ff;
 }
 
-#fatCat {
-  cursor: url('petting.png'), crosshair;
-}
-
-@keyframes wiggle {
-  0% { transform: rotate(0deg); }
-  25% { transform: rotate(5deg); }
-  50% { transform: rotate(-5deg); }
-  75% { transform: rotate(3deg); }
-  100% { transform: rotate(0deg); }
-}
-
-.pet-animation {
-  animation: wiggle 0.5s ease;
-}
 
 .image-row {
     display: flex;
-    justify-content: center;
-    gap: 40px;
+  justify-content: center; /* center images horizontally */
+  flex-wrap: wrap;         /* wrap to new line on small screens */
+  gap: 40px;               /* space between images */
+  padding: 10px 0;
 }
 
 .image-row img {
     width: 400px;
     height: auto;
+    display: inline-block;
+    margin: 0 10px; /* spacing between images */
 }
 
 #confettiButton {
