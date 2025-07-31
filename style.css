@@ -4,6 +4,10 @@ body {
   background: linear-gradient(135deg, #ffdee9, #b5fffc);
   height: 100vh;
   overflow: hidden;
+   background-image: url('birthdayBackground.jpg');
+  background-size: cover;        /* Make image cover full screen */
+  background-repeat: no-repeat;  /* Prevent tiling */
+  background-position: center;   /* Center the image */
 }
 
 .container {
@@ -12,8 +16,8 @@ body {
 }
 
 h1 {
-  font-size: 3em;
-  color: #ff4d6d;
+  font-size: 5em;
+  color: green;
 }
 
 h2 {
@@ -35,5 +39,32 @@ h2 {
 
 .pet-animation {
   animation: wiggle 0.5s ease;
+}
+
+.image-row {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.image-row img {
+    width: 400px;
+    height: auto;
+}
+
+#confettiButton {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  background-color: gold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: background-color 0.3s;
+}
+
+#confettiButton:hover {
+  background-color: orange;
 }
 

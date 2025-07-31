@@ -2,37 +2,64 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Happy Birthday</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="container">
-    <h1>🎉 Happy Birthday, Fat Luke! 🎉</h1>
-    <img id="fatCat" src="FatCat.jpg" alt="Birthday Cat" onclick="petCat()" width="450"/>
-    <h2> Click on Fat Cat to pet him!</h2>
-    <audio id="meowSound" src="meow.mp3" preload="auto"></audio>
-
+    <h1>🎉 CHÚC MỪNG SINH NHẬT BA MẬP! 🎉</h1>
+    <h2> 🎉🥳🎈🎊✨</h2>
+    <div class="image-row">
+      <img src="Cake.jpg" alt="Cake" />
+      <img src="Flowers.webp" alt="Flowers" />
+      <img src="Cake2.jpg" alt="Cake2" />
+    </div>
+    <button id="confettiButton">🎉 CHÚC MỪNG!</button>
   </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script>
+    // Create audio elements dynamically
+    const bgMusic = new Audio('happy-birthday.mp3');
+    bgMusic.loop = true;
+    bgMusic.volume = 0.5;
+    bgMusic.play().catch(() => {
+      // Autoplay might be blocked, user interaction required
+      console.log("Background music requires user interaction to start.");
+    });
+
+    const popSound = new Audio('Confetti.mp3');
+    popSound.preload = 'auto';
+
+    function fireRandomConfetti() {
+      const options = [
+        { particleCount: 100, spread: 60, angle: 90, origin: { y: 0.6 } },
+        { particleCount: 80, spread: 180, angle: 60, origin: { x: 0.2, y: 0.4 } },
+        { particleCount: 120, spread: 120, angle: 120, origin: { x: 0.8, y: 0.4 } },
+        { particleCount: 200, spread: 360, startVelocity: 40, origin: { y: 0.5 } },
+        { particleCount: 150, spread: 70, ticks: 200, origin: { y: 0.7 } }
+      ];
+
+      const effect = options[Math.floor(Math.random() * options.length)];
+      confetti(effect);
+    }
+
+    // Fire once on load
+    fireRandomConfetti();
+
+    document.getElementById("confettiButton").addEventListener("click", () => {
+      // Play sound effect on button click
+      popSound.currentTime = 0;
+      popSound.play();
+
+      fireRandomConfetti();
+
+      // Ensure background music is playing (in case of autoplay block)
+      if (bgMusic.paused) {
+        bgMusic.play();
+      }
+    });
+  </script>
 </body>
 </html>
-
-<script>
-  function petCat() {
-    const cat = document.getElementById("fatCat");
-    const sound = document.getElementById("meowSound");
-
-    // Play sound
-    sound.currentTime = 0;
-    sound.play();
-
-    // Trigger animation
-    cat.classList.add("pet-animation");
-
-    setTimeout(() => {
-      cat.classList.remove("pet-animation");
-    }, 500); 
-  }
-</script>
-
-
