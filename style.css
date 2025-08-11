@@ -1,14 +1,15 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(135deg, #ffdee9, #b5fffc);
   height: 100vh;
   overflow: hidden;
-   background-image: url('birthdayBackground.jpg');
+
+  background-image: url('VietnamCity.jpg');
   background-size: cover;        /* Make image cover full screen */
   background-repeat: no-repeat;  /* Prevent tiling */
   background-position: center;   /* Center the image */
 }
+
 
 html, body {
   height: 100%;
