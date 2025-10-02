@@ -1,95 +1,50 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tri Vo</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-    <link rel="stylesheet" href="css/style.css" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Happy Birthday!</title>
+<link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <nav>
-    <p>Tri Vo</p>
-    <p><a href="contact.html">Contact Tri Vo</a></p>
-    </nav>
-    <header>
-        <h1>Tri Vo</h1>
-        <img src="images/ProfilePicture.jpg" alt="Tri Vo" width="200">
-    </header>
-    <p class="address">317 Clockwork Rd, Penacony, SR 31704 | (314) 159-2653 | thv35131@uga.edu</p>
-    <p class="tagline" >Aspiring Web Developer hoping to make an epic impact!</p>
-    <hr>
-    <section>
-        <h2>Education</h2>
-        <dl>
-            <dt>University of Georgia</dt>
-            <dd>GPA: 4.0</dd>
-            <dt>Bachelor of Science</dt>
-            <dd>May 2026</dd>
-        </dl>
-    </section>
-    <section>
-        <h2>Honors and Awards</h2>
-        <dl>
-            <dt>Epic Dev List</dt>
-            <dd>2023</dd>
-            <dt>Herta Scholarship Award</dt>
-            <dd>2022</dd>
-        </dl>
-    </section>
-    <section>
-        <h2>Skills</h2>
-        <ul>
-            <li>Assembly</li>
-            <li>Java</li>
-            <li>HTML</li>
-            <li>CSS</li>
-        </ul>
-    </section>
-    <section>
-        <h2>Leadership and Experience</h2>
-        <dl>
-            <dt><a href="https://about.google/">Intern at Google</a></dt>
-            <dd>2024 - Present</dd>
-            <dt>Volunteer at Herta Corp.</dt>
-            <dd>2021 - 2023</dd>
-        </dl>
-    </section>
-    <section>
-        <h2>Projects</h2>
-        <div class="three-col">
-            <div class="card">
-                <h3>Online diamond store</h3>
-                <img src="images/diamond.jpg" alt="Online diamond store" width="100">
-                <ul>
-                    <li>Online market place for diamonds</li>
-                    <li>Sold 100+ diamonds products</li>
-                </ul>
-            </div>
-            <div class="card">
-                <h3>Flashcard Teacher</h3>
-                <img src="images/flashcard.png" alt="Flashcard Teacher" width="100">
-                <ul>
-                    <li>Built with HTML/CSS</li>
-                    <li>Teach students vocabulary with flashcards</li>
-                </ul>
-            </div>
-            <div class="card">
-                <h3>Weather Dashboard</h3>
-                <img src="images/weather.jpg" alt="Weather Dashboard" width="100">
-                <ul>
-                    <li>Fetch API and Data Rendering</li>
-                    <li>Display weather information</li>
-                </ul>
-            </div>
+<div>
+    <h1>Happy Birthday, Yen!</h1>
+    <p>Wishing you an epic year with less soul annihilating moments.</p>
+    <button id="musicButton">Click for birthday music!</button>
+    <audio id="birthdayMusic" src="Assets/TVTime.mp3"></audio>
+</div>
+<div class="main-content"> 
+    <img src="Assets/LobsterCake.webp" alt="Lobster Cake" class="image"/>
+    <p>Here's a lobster cake to celebrate!</p>
+    
+    <div class="horizontal-images">
+        <div class="image-block">
+            <img src="Assets/Mem.webp" alt="Mem" class="image2"/>
+            <p class="Mem">Epic pink hug!</p>
         </div>
-    </section>
-    <footer>
-        &copy;
-    <a href="contact.html">Tri Vo</a> |
-    <a class="linkedin" href="https://www.linkedin.com/in/tri-vo-133950308" target="_blank">
-      <i class="fab fa-linkedin"></i>
-    </a>
-    </footer>
+         <div class="image-block">
+            <img src="Assets/Mochi.jpg" alt="Mochi" class="image"/>
+            <p class="main-content">Mochi for high vitamin C!</p>
+        </div>
+        <div class="image-block">
+            <img src="Assets/Bubbles.webp" alt="Bubbles" class="image2"/>
+            <p class="Bubbles">bubbles</p>
+        </div>
+    </div>
+    
+    <img src="Assets/Noodles.jpg" alt="Noodles" class="image"/>
+    <p>And noodles for upcoming college exams!</p>
+
+    <button id="updateBtn">Celebrate!</button>
+    <canvas id="confetti"></canvas>
+    <audio id="popSound" src="Assets/confetti.mp3"></audio>
+
+
+</div>
+
+
+
+
+<script src="script.js"></script>
 </body>
 </html>
